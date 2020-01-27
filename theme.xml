@@ -1,0 +1,1615 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Theme: BATOCERA-VIDEOSYSTEM-5.25
+version: 2.0
+author: Eric Hettervik (Rookervik)
+license: creative commons CC-BY-NC-SA
+originally based on: "simple" by nils bonenberger
+-->
+<theme defaultView="Video">
+  <formatVersion>7</formatVersion>
+<include>./${system.theme}/themesystem.xml</include>
+ <variables>
+    <baseColor>8b0000</baseColor>
+    <gradientEndColor>6b2020</gradientEndColor>
+    <centerFadeColor>8b000050</centerFadeColor>
+    <bottomBarColor>8b0000c0</bottomBarColor>
+    <glowColor>Ab000020</glowColor>
+    <systemInfoColor>DDDDDDD8</systemInfoColor>
+    <backgroundImage>./archivo/fiber.png</backgroundImage>
+    <tilesViewName>Tiles</tilesViewName>
+</variables>
+<variables lang="fr">
+    <tilesViewName>Vignettes</tilesViewName>
+    <tilesVideoViewName>Vignettes + Vidéo</tilesVideoViewName>
+    <tilesVideoMarqueeViewName>Vignettes + Vidéo + Logos</tilesVideoMarqueeViewName>
+    <basicGridName>Boites</basicGridName>
+    <basicGridDetailsName>Boites + Aperçu</basicGridDetailsName>
+    <basicGridVideoName>Boites + Vidéo</basicGridVideoName>
+    <carouselViewName>Carrousel</carouselViewName>
+    <carouselDetailsViewName>Carrousel + Aperçu</carouselDetailsViewName>
+    <red>Rouge</red>
+    <green>Vert</green>
+    <none>Aucun</none>
+    <subset.colorset>Jeux de couleurs</subset.colorset>
+    <subset.shader>Effets TV</subset.shader>
+</variables>
+<include subset="colorset" name="system" displayName="${green}">./archivo/colors/system.xml</include>
+<include subset="shader" name="None" displayName="${none}"/>
+<include subset="shader" name="ScanLines">./archivo/scanlines.xml</include>
+<include subset="shader" name="ScanLines2">./archivo/scanlines2.xml</include>
+<include subset="shader" name="ScanLines3">./archivo/scanlines3.xml</include>
+<include subset="shader" name="ScanLines4">./archivo/scanlines4.xml</include>
+<include subset="shader" name="ScanLines5">./archivo/scanlines5.xml</include>
+<include subset="shader" name="ScanLines6">./archivo/scanlines6.xml</include>
+<include subset="shader" name="ScanLines7">./archivo/scanlines7.xml</include>
+<include subset="shader" name="ScanLines8">./archivo/scanlines8.xml</include>
+<include subset="shader" name="ScanLines9">./archivo/scanlines9.xml</include>
+<include subset="shader" name="ScanLines10">./archivo/scanlines10.xml</include>
+<include subset="shader" name="ScanLines11">./archivo/scanlines11.xml</include>
+<include subset="shader" name="ScanLines square">./archivo/scanlines square.xml</include>
+<include subset="shader" name="ScanLines vertical">./archivo/scanlines vertical.xml</include>
+<include subset="shader" name="ScanLines vertical 2">./archivo/scanlines vertical 2.xml</include>
+<include subset="shader" name="Crt">./archivo/crt.xml</include>
+<include subset="Effects" name="None" displayName="${none}"/>
+<include subset="Effects" name="glass effect">./archivo/glass effect.xml</include>
+<include subset="Effects" name="glass effect2">./archivo/glass effect2.xml</include>
+<include subset="Effects" name="green filter">./archivo/Green filter.xml</include>
+<include subset="Effects" name="Blue filter">./archivo/Blue filter.xml</include>
+<include subset="Effects" name="led">./archivo/led.xml</include>
+<include subset="Effects" name="led2">./archivo/led2.xml</include>
+<include subset="Effects" name="Effect1">./archivo/Effect1.xml</include>
+<include subset="Effects" name="Effect2">./archivo/Effect2.xml</include>
+<include subset="Effects" name="Effect3">./archivo/Effect3.xml</include>
+<include subset="Effects" name="Effect4">./archivo/Effect4.xml</include>
+<include subset="Effects" name="mask">./archivo/mask.xml</include>
+<view name="screen">
+    <text name="clock">
+      <textColor>777777FF</textColor>
+      <fontSize>0.035</fontSize>
+      <pos>0.94 0.94</pos>
+      <size>0.05 0.058</size>
+      <verticalAlignment>center</verticalAlignment>
+    </text>
+<controllerActivity name="controllerActivity">
+      <pos>0.01 0.96</pos>
+      <size>0.085 0.025</size>
+      <itemSpacing>0.003</itemSpacing>
+      <imagePath>./archivo/bl.png</imagePath>
+      <color>FFFFFF80</color>
+      <size>0.130 0.050</size>
+      <pos>0.01 0.95</pos>
+      <activityColor>A0A0FFC0</activityColor>
+      <hotkeyColor>FFA0A0C0</hotkeyColor>
+    </controllerActivity>
+</view>
+<view name="menu">
+    <menuText name="menutitle">
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <fontSize>0.025</fontSize>
+      <color>FFFFFF</color>
+    </menuText>
+    <menuText name="menufooter">
+      <fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+      <fontSize>0.02</fontSize>
+      <color>FFFFFF</color>
+</menuText>
+    <menuText name="menutext">
+      <fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+      <fontSize>0.026</fontSize>
+      <color>FFFFFF</color>
+      <separatorColor>FFFFFF</separatorColor>
+      <selectorColor>${baseColor}</selectorColor>
+      <selectorColorEnd>${gradientEndColor}</selectorColorEnd>
+      <selectedColor>000000</selectedColor>
+      <selectorGradientType>horizontal</selectorGradientType>
+</menuText>
+    <menuTextSmall name="menutextsmall">
+      <fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+      <fontSize>0.02</fontSize>
+      <color>deec00</color>
+    </menuTextSmall>
+    <menuBackground name="menubg">
+      <color>ffffff</color>
+      <cornerSize>32 32</cornerSize>
+      <path>./archivo/fiber.png</path>
+</menuBackground>
+<menuIcons name="menuicons">
+      <iconKodi>./archivo/icons/Kodi.png</iconKodi>
+      <iconSystem>./archivo/icons/System.png</iconSystem>
+      <iconUpdates>./archivo/icons/Updates.png</iconUpdates>
+      <iconGames>./archivo/icons/Games.png</iconGames>
+      <iconControllers>./archivo/icons/Controllers.png</iconControllers>
+      <iconUI>./archivo/icons/UI.png</iconUI>
+      <iconSound>./archivo/icons/Sound.png</iconSound>
+      <iconNetwork>./archivo/icons/Network.png</iconNetwork>
+      <iconScraper>./archivo/icons/Scraper.png</iconScraper>
+      <iconAdvanced>./archivo/icons/Advanced.png</iconAdvanced>
+      <iconQuit>./archivo/icons/Quit.png</iconQuit>
+      <iconRestarchivo>./archivo/icons/Restarchivo.png</iconRestarchivo>
+      <iconShutdown>./archivo/icons/Shutdown.png</iconShutdown>
+      <iconFastShutdown>./archivo/icons/Fastshutdown.png</iconFastShutdown>
+      <iconRetroachievements>./archivo/icons/Contest.png</iconRetroachievements>
+    </menuIcons>
+    <menuTextEdit name="menutextedit">
+      <inactive>./archivo/textinput_ninepatch.png</inactive>
+      <active>./archivo/textinput_ninepatch_active.png</active>
+    </menuTextEdit>
+</view>
+<view name="system">
+  <image name="background1" extra="true">
+			<tile>false</tile>
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./archivo/sistema.png</path>
+</image>
+<carousel name="systemcarousel">
+		<type>vertical_wheel</type>
+		<pos>0 0</pos>
+		<size>1 1</size>
+		<origin>0 0</origin>
+		<color>00000000</color>
+		<logoScale>1.4</logoScale>
+        <logoSize>0.200 0.260</logoSize>
+		<logoRotation>-6.5</logoRotation>
+		<logoRotationOrigin>4 0.5</logoRotationOrigin>
+		<logoAlignment>right</logoAlignment>
+		<maxLogoCount>7</maxLogoCount>
+		<zIndex>75</zIndex>
+</carousel>
+<text name="systemInfo">
+      <pos>-0.18 0.78</pos>
+      <fontSize>0.03</fontSize>
+      <fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+      <backgroundColor>00000000</backgroundColor>
+      <color>FFFFFF</color>
+      <glowColor>050505</glowColor>
+      <glowSize>2</glowSize>
+      <reflexion>0.60 0.0</reflexion>
+</text>
+<image name="carousel-shadow" extra="true">
+      <path>./archivo/shadow.png</path>
+      <color>FFFFFF50</color>
+      <pos>0 0.6162</pos>
+      <origin>0 0</origin>
+      <size>1 0.025</size>
+      <zIndex>11</zIndex>
+</image>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<text name="logoText">
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>fccbfc</color>
+      <forceUppercase>true</forceUppercase>
+    </text>
+    <image name="logo">
+      <path>./${system.theme}/logo.png</path>
+</image>
+<video name="backgroundvideoxx" extra="true">
+      <path>./archivo/ryuxxxxxxxxxxx.mp4</path>                 
+      <pos>0.689625 0.7451635</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.156035 0.513645</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+		<showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideologo" extra="true">
+      <path>./archivo/giphyxxx.mp4</path>                 
+       <pos>0.849945 0.4920035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.205875 0.098035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	  <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo1" extra="true">
+     <path>./${system.theme}/intro.mp4</path>                   
+      <pos>0.3136 0.485</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.5870 0.553</size>
+      <delay>0</delay>
+	  	<showSnapshotNoVideo>false</showSnapshotNoVideo>
+		<showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo0" extra="true">
+      <path>./archivo/rainbown.mp4</path>                 
+      <pos>0.270635 0.07</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.565 0.150</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo5" extra="true">
+      <path>./archivo/flecha.mp4</path>                 
+      <pos>0.976135 0.50</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.0467 0.163</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</view>
+<view name="basic">
+    <image name="background" extra="true">
+      <tile>false</tile>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <size>1 1</size>
+      <path>./archivo/basic.png</path>
+    </image>
+<textlist name="gamelist">
+      <selectorColor>000000ab</selectorColor>
+      <selectedColor>ffffff</selectedColor>
+      <primaryColor>000000</primaryColor>
+      <secondaryColor>7a6161</secondaryColor>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <fontSize>0.030</fontSize>
+      <pos>0.292 0.18</pos>
+      <size>0.400 0.68</size>
+      <alignment>center</alignment>
+      <horizontalMargin>0.01</horizontalMargin>
+      <forceUppercase>1</forceUppercase>
+      <scrollSound>./archivo/soundbasic.wav</scrollSound>
+    </textlist>
+<helpsystem name="help">
+<textColor>000000</textColor>
+<iconColor>000000</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<text name="logoText">
+      <pos>0.02 0.02</pos>
+      <size>0.98 0.126</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+    </text>
+    <image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.48 0.08</pos>
+      <size>0.3 0.126</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo" extra="true">
+      <path>./archivo/kofg.mp4</path>                 
+      <pos>0.867625 0.6181635</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.197935 0.624935</size>
+      <delay>0</delay>
+         <showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/kofr.mp4</path>                 
+      <pos>0.135625 0.6651635</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.171035 0.550935</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/logcarou.mp4</path>                 
+       <pos>0.489745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.100035</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</view>
+<view name="detailed">
+  <video name="md_video">
+      <pos>0.6722 0.503</pos>
+      <size>0.5460 0.545</size>
+      <origin>0.5 0.5</origin>
+      <delay>0</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>true</showSnapshotDelay>
+    </video>
+<image name="background">
+      <tile>false</tile>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <size>1 1</size>
+     <path>./archivo/menu.png</path>
+</image>
+    <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_players, md_players, md_lbl_releasedate">
+      <color>fccbfc</color>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <fontSize>0.023</fontSize>
+    </text>
+    <text name="md_lbl_rating, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate, md_lbl_genre, md_lbl_developer">
+      <pos>1 1</pos>
+    </text>
+      <textlist name="gamelist">
+      <selectorColor>FGFGFGFGF</selectorColor>
+      <selectedColor>f6933b</selectedColor>
+      <primaryColor>ffffff</primaryColor>
+      <secondaryColor>e0dcdc</secondaryColor>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <forceUppercase>1</forceUppercase>
+      <pos>0.021 0.145</pos>
+      <size>0.200 0.724</size>
+      <alignment>left</alignment>
+      <horizontalMargin>0.00</horizontalMargin>
+      <fontSize>0.02</fontSize>
+       <scrollSound>./archivo/soundbasic.wav</scrollSound>
+</textlist>
+<text name="md_lbl_players, md_players">
+       <color>EFEFFF</color>
+      <pos>0.53 0.166</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+    </text>
+    <text name="md_players">
+       <color>EFEFFF</color>
+      <pos>0.58 0.166</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+    </text>
+<datetime name="md_lastplayed">
+      <color>EFEFFF</color>
+      <pos>0.64 0.166</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</datetime>
+<datetime name="md_releasedate">
+      <color>EFEFFF</color>
+      <pos>0.78 0.166</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</datetime>
+<text name="md_developer">
+      <color>EFEFFF</color>
+      <pos>0.40 0.176</pos>
+      <size>0.09 0.03</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</text>
+<text name="md_genre">
+     <color>EFEFFF</color>
+      <pos>0.88 0.166</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</text>
+<text name="md_description">
+      <pos>0.414 0.852</pos>
+      <size>0.44 0.08</size>
+      <fontSize>0.023</fontSize>
+      <color>A0A0B0</color>
+</text>
+<text name="md_rating">
+      <pos>0.9 0.886</pos>
+      <size>0.05 0.03</size>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<image name="md_marquee">
+          <pos>2000 2000</pos>
+         <origin>.5 .5</origin>
+       <size>0 0</size>
+</image>
+<text name="logoText">
+      <pos>0.02 0.02</pos>
+      <size>0.98 0.126</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.61 0.08</pos>
+      <size>0.3 0.126</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo" extra="true">
+      <path>./archivo/kof.mp4</path>                 
+      <pos>0.314000 0.7246035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.178005 0.4383199</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo1" extra="true">
+      <path>./archivo/games.mp4</path>                 
+      <pos>0.118635 0.05</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.2099 0.075</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/foter.mp4</path>                 
+      <pos>0.50 0.94</pos>
+      <origin>0.5 0.5</origin>
+      <size>1 0.01</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/marquesina.mp4</path>                 
+       <pos>0.619745 0.0730035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.110035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	  <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo4" extra="true">
+      <path>./archivo/neonlight.mp4</path>                 
+      <pos>0.935745 0.0800035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.131875 0.164035</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+    <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</view>
+<view name="video">
+<video name="md_video">
+      <pos>0.6722 0.503</pos>
+      <size>0.5460 0.545</size>
+      <origin>0.5 0.5</origin>
+      <delay>0</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>true</showSnapshotDelay>
+</video>
+<image name="background">
+      <tile>false</tile>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <size>1 1</size>
+     <path>./archivo/menu.png</path>
+</image>
+<text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_players, md_players, md_lbl_releasedate">
+      <color>fccbfc</color>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <fontSize>0.023</fontSize>
+</text>
+<text name="md_lbl_rating, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate, md_lbl_genre, md_lbl_developer">
+      <pos>1 1</pos>
+</text>
+<textlist name="gamelist">
+      <selectorColor>FGFGFGFGF</selectorColor>
+      <selectedColor>f6933b</selectedColor>
+      <primaryColor>ffffff</primaryColor>
+      <secondaryColor>e0dcdc</secondaryColor>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <forceUppercase>1</forceUppercase>
+      <pos>0.021 0.145</pos>
+      <size>0.200 0.724</size>
+      <alignment>left</alignment>
+      <horizontalMargin>0.00</horizontalMargin>
+      <fontSize>0.02</fontSize>
+       <scrollSound>./archivo/soundbasic.wav</scrollSound>
+</textlist>
+<text name="md_lbl_players, md_players">
+      <pos>0.9991 0.9963</pos>
+      <size>0.09 0</size>
+    </text>
+<text name="md_players">
+      <pos>0.9998 0.9963</pos>
+      <size>0.02 0</size>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<image name="md_marquee">
+          <pos>2000 2000</pos>
+         <origin>.5 .5</origin>
+       <size>0 0</size>
+</image>
+<text name="logoText">
+      <pos>0.02 0.02</pos>
+      <size>0.98 0.126</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.61 0.08</pos>
+      <size>0.3 0.126</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo" extra="true">
+      <path>./archivo/kof.mp4</path>                 
+      <pos>0.314000 0.7246035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.178005 0.4383199</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+     <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo1" extra="true">
+      <path>./archivo/games.mp4</path>                 
+      <pos>0.118635 0.05</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.2099 0.075</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	 <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/foter.mp4</path>                 
+      <pos>0.50 0.94</pos>
+      <origin>0.5 0.5</origin>
+      <size>1 0.01</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/marquesina.mp4</path>                 
+       <pos>0.619745 0.0730035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.110035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo4" extra="true">
+      <path>./archivo/neonlight.mp4</path>                 
+      <pos>0.935745 0.0800035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.131875 0.164035</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+     <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</view>
+<view name="grid">
+    <image name="background">
+      <tile>false</tile>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <size>1 1</size>
+      <path>./archivo/grid.png</path>
+</image>
+    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_players, md_lbl_lastplayed, md_lbl_playcount">
+      <color>A0A0B000</color>
+</text>
+<text name="md_developer, md_publisher, md_genre, md_players, md_playcount, md_description">
+      <color>1C00ff00</color>
+</text>
+<datetime name="md_releasedate, md_lastplayed">
+      <color>1C00ff00</color>
+</datetime>
+<rating name="md_rating">
+      <pos>0.88 0.88</pos>
+      <size>0.05 0.03</size>
+      <color>FFFFFF</color>
+      <unfilledColor>808080</unfilledColor>
+</rating>
+<imagegrid name="gamegrid">
+      <pos>0.025 0.16</pos>
+      <size>0.950 0.774</size>
+      <margin>0.005 0.030</margin>
+      <padding>0.03 0.05 0.03 0.04</padding>
+      <autoLayout>5 2</autoLayout>
+      <autoLayoutSelectedZoom>1.12</autoLayoutSelectedZoom>
+      <animateSelection>false</animateSelection>
+</imagegrid>
+<gridtile name="default">
+      <backgroundColor>FFFFFF00</backgroundColor>
+      <backgroundCornerSize>9 9</backgroundCornerSize>
+      <selectionMode>image</selectionMode>
+      <padding>5 5</padding>
+      <imageColor>FFFFFFB0</imageColor>
+</gridtile>
+<gridtile name="selected">
+      <backgroundCenterColor>${centerFadeColor}</backgroundCenterColor>
+      <backgroundEdgeColor>ffffff</backgroundEdgeColor>
+      <imageColor>FFFFFFFF</imageColor>
+</gridtile>
+<text name="gridtile">
+      <color>D0D0D0</color>
+      <backgroundColor>00000000</backgroundColor>
+      <fontSize>0.022</fontSize>
+      <alignment>center</alignment>
+      <size>1 0.24</size>
+</text>
+<text name="gridtile_selected">
+      <color>FFFFFF</color>
+      <glowColor>${glowColor}</glowColor>
+      <glowSize>3</glowSize>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<text name="md_name">
+      <color>ffffffff</color>
+      <pos>0.46 0.02</pos>
+      <size>0.30 0.05</size>
+      <fontSize>0.042</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <alignment>center</alignment>
+       <reflexion>0.34 0.0</reflexion>
+       <color>ffffffff</color>
+</text>
+<text name="logoText">
+     <pos>0.20 0.07</pos>
+      <size>0.3 0.123</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.20 0.07</pos>
+      <size>0.3 0.123</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/marquesinagrid.mp4</path>                 
+       <pos>0.209745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.100035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	  <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/foter.mp4</path>                 
+      <pos>0.50 0.94</pos>
+      <origin>0.5 0.5</origin>
+      <size>1 0.01</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo4" extra="true">
+      <path>./archivo/foter.mp4</path>                 
+      <pos>0.50 0.13</pos>
+      <origin>0.5 0.5</origin>
+      <size>1 0.01</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+    </video>
+</view>
+ <customView name="Mini Grid" inherits="grid" displayName="${carouselDetailsViewName}">
+<image name="background2" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./archivo/carousel.png</path>
+</image>
+<imagegrid name="gamegrid">
+      <pos>0.385 0.20</pos>
+      <size>0.615 0.640</size>
+      <margin>0.005 0.035</margin>
+      <padding>0.03 0.05 0.03 0.04</padding>
+      <autoLayout>5 2</autoLayout>
+      <autoLayoutSelectedZoom>1.12</autoLayoutSelectedZoom>
+      <animateSelection>true</animateSelection>
+</imagegrid>
+<gridtile name="default">
+      <backgroundColor>FFFFFF00</backgroundColor>
+      <backgroundCornerSize>9 9</backgroundCornerSize>
+      <selectionMode>image</selectionMode>
+      <size>0.225 0.248</size>
+      <padding>5 5</padding>
+      <imageColor>FFFFFFB0</imageColor>
+</gridtile>
+<gridtile name="selected">
+     <size>0.226 0.251</size>
+      <padding>1 1</padding>
+      <backgroundCenterColor>${centerFadeColor}</backgroundCenterColor>
+      <backgroundEdgeColor>ba7152</backgroundEdgeColor>
+      <imageColor>FFFFFF</imageColor>
+</gridtile>
+<text name="gridtile">
+      <color>1C00ff00</color>
+      <backgroundColor>00000000</backgroundColor>
+      <fontSize>0.022</fontSize>
+      <alignment>center</alignment>
+      <size>1 0.24</size>
+</text>
+<text name="gridtile_selected">
+      <color>1C00ff00</color>
+      <glowColor>${glowColor}</glowColor>
+      <glowSize>0</glowSize>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<text name="md_name">
+      <color>ffffffff</color>
+      <pos>0.46 0.02</pos>
+      <size>0.30 0.05</size>
+      <fontSize>0.042</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <alignment>center</alignment>
+       <reflexion>0.40 0.0</reflexion>
+       <color>ffffffff</color>
+</text>
+<text name="logoText">
+     <pos>0.20 0.07</pos>
+      <size>0.3 0.123</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.20 0.07</pos>
+      <size>0.3 0.123</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo1" extra="true">
+      <path>./archivo/marquesinagrid.mp4</path>                 
+       <pos>0.209745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.100035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+     <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/k33.mp4</path>                 
+      <pos>0.113625 0.6331635</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.230035 0.533935</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+     <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>           
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/foter.mp4</path>                 
+      <pos>0.50 0.94</pos>
+      <origin>0.5 0.5</origin>
+      <size>1 0.01</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo4" extra="true">
+      <path>./archivo/foter.mp4</path>                 
+      <pos>0.50 0.13</pos>
+      <origin>0.5 0.5</origin>
+      <size>1 0.01</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+    </video>
+</customView>
+ <customView name="Boxes" inherits="grid" displayName="${basicGridName}">
+<image name="background2" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./archivo/grid.png</path>
+</image>
+<imagegrid name="gamegrid">
+      <autoLayout>6 2</autoLayout>
+      <autoLayoutSelectedZoom>1.09</autoLayoutSelectedZoom>
+    </imagegrid>
+    <text name="gridtile">
+      <visible>false</visible>
+</text>
+<image name="gridtile.favorite">
+      <path>./archivo/gridfav.png</path>
+      <pos>0.75 0</pos>
+      <maxSize>0.25 0.25</maxSize>
+      <origin>0 0</origin>
+      <color>A0A0A0A0</color>
+</image>  
+<image name="gridtile.favorite:selected">
+    <path>./archivo/gridfav.png</path>
+      <color>${bottomBarColor}</color>      
+</image>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+</customView>
+<customView name="Boxes + Video" inherits="Boxes" displayName="${basicGridVideoName}">
+<imagegrid name="gamegrid">
+    <pos>0 0.16</pos>
+      <size>1 0.774</size>
+      <showVideoAtDelay>250</showVideoAtDelay>
+      <padding>0.05 0.14 0.05 0.30</padding>
+      <scrollDirection>horizontal</scrollDirection>
+       <autoLayout>5 1</autoLayout>
+        <autoLayoutSelectedZoom>1.56</autoLayoutSelectedZoom>
+      <margin>0.007 0.010</margin>
+       <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+      <animateSelection>true</animateSelection>
+</imagegrid>
+<gridtile name="default">
+      <padding>2 2</padding>
+      <backgroundCornerSize>0 0</backgroundCornerSize>
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>f6f6f9</imageColor>
+      <reflexion>0.44 0.0</reflexion>
+</gridtile>
+<gridtile name="selected">
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+      <padding>64 16</padding>
+</gridtile>
+<text name="gridtile">
+      <color>80808080</color>
+      <fontSize>0.016</fontSize>
+      <size>1 0</size>
+</text>
+<text name="gridtile_selected">
+      <color>FFFFFF00</color>
+      <fontSize>0.035</fontSize>
+      <size>1 0</size>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+</customView>
+<customView name="Boxes + details" inherits="Boxes" displayName="${basicGridDetailsName}">
+<image name="background2" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./archivo/marquee.png</path>
+</image>
+<imagegrid name="gamegrid">
+    <pos>-0.01 -0.10</pos>
+      <size>0.30 1</size>
+         <padding>0.04 .50 0.07 0.30</padding>
+      <scrollDirection>vertical</scrollDirection>
+      <autoLayout>1 1</autoLayout>
+       <imageSource>Boxes</imageSource>
+      <autoLayoutSelectedZoom>1.36</autoLayoutSelectedZoom>
+       <margin>0.005 0.010</margin>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+</imagegrid>
+<image name="md_image">
+      <visible>false</visible>
+      <pos>0.6864 0.487</pos>
+      <size>0.5798 0.5410</size>
+      <origin>0.5 0.5</origin>
+</image>
+<text name="md_name">
+      <color>ffffffff</color>
+      <pos>0.50 0.770</pos>
+      <size>0.30 0.05</size>
+      <fontSize>0.032</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <alignment>center</alignment>
+      <glowColor>${glowColor}</glowColor>
+      <glowSize>0</glowSize>
+</text>
+<video name="md_video">
+      <pos>0.6864 0.487</pos>
+      <size>0.5798 0.5410</size>
+      <origin>0.5 0.5</origin>
+      <delay>0</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>true</showSnapshotDelay>
+</video>
+<gridtile name="default">
+      <padding>64 16</padding>
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFAA</imageColor>
+      <reflexion>0.09 0.0</reflexion>
+</gridtile>
+<text name="md_rating">
+      <pos>0.9 0.886</pos>
+      <size>0.05 0.03</size>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.020</fontSize>
+<pos>0.25 0.96</pos>
+</helpsystem>
+<text name="logoText">
+     <pos>0.70 0.07</pos>
+      <size>0.3 0.123</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.70 0.07</pos>
+      <size>0.3 0.123</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/marquesinagrid.mp4</path>                 
+       <pos>0.709745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.100035</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+     <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/selmarq.mp4</path>                 
+       <pos>0.282625 0.4850035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.047 0.117</size>
+      <delay>0</delay>
+     <showSnapshotNoVideo>false</showSnapshotNoVideo>
+     <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo4" extra="true">
+      <path>./archivo/foter.mp4</path>                 
+      <pos>0.88 0.14</pos>
+      <origin>0.5 0.5</origin>
+      <size>1 0.01</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<text name="md_lbl_players, md_players">
+       <color>EFEFFF</color>
+      <pos>0.53 0.156</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</text>
+<text name="md_players">
+       <color>EFEFFF</color>
+      <pos>0.58 0.156</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</text>
+<datetime name="md_lastplayed">
+      <color>EFEFFF</color>
+      <pos>0.64 0.156</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</datetime>
+<datetime name="md_releasedate">
+      <color>EFEFFF</color>
+      <pos>0.78 0.156</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</datetime>
+<text name="md_developer">
+      <color>EFEFFF</color>
+      <pos>0.40 0.164</pos>
+      <size>0.09 0.03</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</text>
+<text name="md_genre">
+     <color>EFEFFF</color>
+      <pos>0.88 0.156</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+</text>
+<text name="md_description">
+      <pos>0.414 0.835</pos>
+      <size>0.44 0.10</size>
+      <fontSize>0.023</fontSize>
+      <color>A0A0B0</color>
+</text>
+<text name="md_rating">
+      <pos>0.9 0.886</pos>
+      <size>0.05 0.03</size>
+</text>
+</customView>
+<customView name="Carousel" inherits="grid" tinyScreen="false" displayName="${carouselViewName}">
+<image name="background2" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./archivo/grid.png</path>
+</image>
+<text name="md_name">
+      <color>ffffffff</color>
+      <pos>0.04 0.76</pos>
+      <size>0.92 0.10</size>
+      <alignment>center</alignment>
+      <glowColor>00000016</glowColor>
+      <glowSize>4</glowSize>
+</text>
+<imagegrid name="gamegrid">
+      <pos>0 0.16</pos>
+      <size>1 0.774</size>
+      <padding>0.05 0.14 0.05 0.30</padding>
+      <scrollDirection>horizontal</scrollDirection>
+      <autoLayout>5 1</autoLayout>
+       <autoLayoutSelectedZoom>1.56</autoLayoutSelectedZoom>
+      <margin>0.005 0.010</margin>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+      <animateSelection>false</animateSelection>
+</imagegrid>
+<gridtile name="default">
+      <padding>64 16</padding>
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>f6f6f9</imageColor>
+      <reflexion>0.44 0.0</reflexion>
+</gridtile>
+<gridtile name="selected">
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+      <padding>64 16</padding>
+</gridtile>
+<text name="gridtile">
+      <color>80808080</color>
+      <fontSize>0.016</fontSize>
+      <size>1 0</size>
+</text>
+<text name="gridtile_selected">
+      <color>FFFFFF00</color>
+      <fontSize>0.035</fontSize>
+      <size>1 0</size>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<text name="logoText">
+     <pos>0.48 0.07</pos>
+      <size>0.3 0.123</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.48 0.07</pos>
+      <size>0.3 0.123</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/logcarou.mp4</path>                 
+       <pos>0.489745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.100035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/coin.mp4</path>                 
+       <pos>0.289745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.090875 0.094035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</customView>
+<customView name="marquee" inherits="Carousel" displayName="${carouselDetailsViewName}">
+<image name="background2" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./archivo/marquee.png</path>
+</image>
+<imagegrid name="gamegrid">
+     <pos>-0.01 -0.10</pos>
+      <size>0.30 1</size>
+         <padding>0.04 .50 0.07 0.30</padding>
+      <scrollDirection>vertical</scrollDirection>
+      <autoLayout>1 1</autoLayout>
+       <imageSource>marquee</imageSource>
+      <autoLayoutSelectedZoom>1.56</autoLayoutSelectedZoom>
+       <margin>0.005 0.010</margin>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+</imagegrid>
+<image name="md_image">
+      <visible>false</visible>
+      <pos>0.6864 0.487</pos>
+      <size>0.5798 0.5410</size>
+      <origin>0.5 0.5</origin>
+</image>
+<text name="md_name">
+      <color>ffffffff</color>
+      <pos>0.50 0.782</pos>
+      <size>0.30 0.05</size>
+      <fontSize>0.032</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <alignment>center</alignment>
+      <glowColor>${glowColor}</glowColor>
+      <glowSize>2</glowSize>
+</text>
+<video name="md_video">
+      <pos>0.6864 0.487</pos>
+      <size>0.5798 0.5410</size>
+      <origin>0.5 0.5</origin>
+      <delay>0</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>true</showSnapshotDelay>
+</video>
+<gridtile name="default">
+      <padding>64 16</padding>
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFAA</imageColor>
+      <reflexion>0.09 0.0</reflexion>
+</gridtile>
+<text name="md_rating">
+      <pos>0.9 0.886</pos>
+      <size>0.05 0.03</size>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<text name="logoText">
+     <pos>0.70 0.07</pos>
+      <size>0.3 0.123</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.70 0.07</pos>
+      <size>0.3 0.123</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/marquesinagrid.mp4</path>                 
+       <pos>0.709745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.100035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+     <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/selmarq.mp4</path>                 
+       <pos>0.282625 0.4850035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.047 0.117</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+     <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo4" extra="true">
+      <path>./archivo/str.mp4</path>                 
+     <pos>0.459745 0.0820035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.107875 0.133035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</customView>
+<customView name="wheel" inherits="Carousel" displayName="${carouselDetailsViewName}">
+<image name="background2" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./archivo/marquee.png</path>
+</image>
+<imagegrid name="gamegrid">
+     <pos>-0.01 -0.10</pos>
+      <size>0.30 1</size>
+         <padding>0.04 .50 0.07 0.30</padding>
+      <scrollDirection>vertical</scrollDirection>
+      <autoLayout>1 1</autoLayout>
+       <imageSource>wheel</imageSource>
+      <autoLayoutSelectedZoom>1.56</autoLayoutSelectedZoom>
+       <margin>0.005 0.010</margin>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+</imagegrid>
+<image name="md_image">
+      <visible>false</visible>
+      <pos>0.6864 0.487</pos>
+      <size>0.5798 0.5410</size>
+      <origin>0.5 0.5</origin>
+</image>
+<text name="md_name">
+      <color>ffffffff</color>
+      <pos>0.50 0.782</pos>
+      <size>0.30 0.05</size>
+      <fontSize>0.032</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <alignment>center</alignment>
+      <glowColor>${glowColor}</glowColor>
+      <glowSize>2</glowSize>
+</text>
+<video name="md_video">
+      <pos>0.6864 0.487</pos>
+      <size>0.5798 0.5410</size>
+      <origin>0.5 0.5</origin>
+      <delay>0</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>true</showSnapshotDelay>
+</video>
+<gridtile name="default">
+      <padding>64 16</padding>
+      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
+      <imageSizeMode>maxSize</imageSizeMode>
+      <imageColor>FFFFFFAA</imageColor>
+      <reflexion>0.09 0.0</reflexion>
+</gridtile>
+<text name="md_rating">
+      <pos>0.9 0.886</pos>
+      <size>0.05 0.03</size>
+</text>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<text name="logoText">
+     <pos>0.70 0.07</pos>
+      <size>0.3 0.123</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.70 0.07</pos>
+      <size>0.3 0.123</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/marquesinagrid.mp4</path>                 
+       <pos>0.709745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.100035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo3" extra="true">
+      <path>./archivo/selmarq.mp4</path>                 
+       <pos>0.282625 0.4850035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.047 0.117</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	  <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideo4" extra="true">
+      <path>./archivo/link.mp4</path>                 
+      <pos>0.489745 0.0720035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.097875 0.150035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</customView>
+<customView name="Tiles" inherits="grid" displayName="${tilesViewName}">
+<image name="background2" extra="true">
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./archivo/grid.png</path>
+</image>
+<imagegrid name="gamegrid">
+    <pos>0 0.16</pos>
+      <size>1 0.774</size>
+      <padding>0.05 0.14 0.05 0.30</padding>
+       <scrollDirection>horizontal</scrollDirection>
+      <autoLayout>5 1</autoLayout>
+      <autoLayoutSelectedZoom>1.46</autoLayoutSelectedZoom>
+      <imageSource>image</imageSource>
+      <margin>0.005 0.020</margin>
+      <centerSelection>true</centerSelection>
+      <scrollLoop>true</scrollLoop>
+      <zIndex>11</zIndex>
+</imagegrid>
+<gridtile name="default">
+      <size>0.225 0.254</size>
+      <backgroundImage></backgroundImage>
+      <backgroundCenterColor>FFFFFF20</backgroundCenterColor>
+      <backgroundEdgeColor>FFFFFF20</backgroundEdgeColor>      
+      <padding>1 1</padding>
+      <imageSizeMode>minSize</imageSizeMode>
+      <imageColor>FFFFFFAA</imageColor>
+      <backgroundCornerSize>0 0</backgroundCornerSize>      
+      <backgroundCornerSize>0.06</backgroundCornerSize>     
+</gridtile>
+<gridtile name="selected">
+      <size>0.220 0.249</size>
+      <padding>5 5</padding>
+      <imageColor>FFFFFFFF</imageColor>
+      <backgroundCornerSize>0 0</backgroundCornerSize>      
+      <backgroundCornerSize>0.06</backgroundCornerSize> 
+</gridtile>
+<ninepatch name="gridtile.background:selected">
+      <animateColor>EFEF60B0</animateColor>
+      <animateColorTime>350</animateColorTime>
+</ninepatch>
+<image name="gridtile.image">
+      <roundCorners>0.06</roundCorners>
+</image>
+<text name="gridtile">
+      <color>D0D0D0D0</color>
+      <backgroundColor>00000000</backgroundColor>
+      <fontSize>0.028</fontSize>
+      <alignment>center</alignment>
+      <size>0 0.18</size>
+      <glowColor>00000008</glowColor>
+      <glowSize>3</glowSize>
+</text>
+<text name="gridtile_selected">
+      <color>FFFFFF</color>
+      <glowColor>${glowColor}</glowColor>
+      <glowSize>3</glowSize>
+</text>
+<image name="gridtile.favorite">
+      <path>:/star_filled.svg</path>      
+      <pos>0.93 0.07</pos>
+      <maxSize>0.10 0.10</maxSize>
+      <origin>0.5 0.5</origin>
+      <horizontalAlignment>right</horizontalAlignment>
+      <color>FFFF0080</color>
+</image>  
+    <image name="gridtile.favorite:selected">
+      <color>FFFF00D0</color>
+</image>  
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+<text name="logoText">
+     <pos>0.20 0.07</pos>
+      <size>0.3 0.123</size>
+      <alignment>center</alignment>
+      <fontSize>0.08</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <color>${baseColor}</color>
+</text>
+<image name="logo">
+      <path>./${system.theme}/logo.png</path>
+      <pos>0.20 0.07</pos>
+      <size>0.3 0.123</size>
+    <origin>0.5 0.5</origin>
+</image>
+<video name="backgroundvideo2" extra="true">
+      <path>./archivo/marquesinagrid.mp4</path>                 
+       <pos>0.209745 0.0650035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.220875 0.100035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</customView>
+<customView name="Tiles + Video" inherits="Tiles" displayName="${tilesVideoViewName}">
+    <imagegrid name="gamegrid">
+      <showVideoAtDelay>100</showVideoAtDelay>
+</imagegrid>
+	    <helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+</customView>
+<customView name="Tiles + Video + Marquee" inherits="Tiles + Video" displayName="${tilesVideoMarqueeViewName}">
+<gridtile name="default">
+      <imageColor>A0A0A0FF</imageColor>
+</gridtile>
+<image name="md_thumbnail">
+      <pos>0.5 0.55</pos>
+      <minSize>1 0.774</minSize>
+      <origin>0.5 0.5</origin>
+      <zIndex>10</zIndex>
+      <color>FFFFFF40</color>
+</image>
+<image name="gridtile.marquee">
+      <color>FFFFFFD0</color>
+      <pos>0.5 0.5</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.50 0.50</size>
+</image>
+<image name="gridtile.marquee:selected">      
+      <color>FFFFFFFF</color>
+      <size>0.65 0.65</size>   
+</image>
+<image name="gridtile.marquee:videoplaying">      
+      <color>FFFFFFA0</color>
+      <pos>0.5 0.17</pos>
+      <size>0.50 0.25</size>
+</image>
+<text name="gridtile">
+      <pos>0 0</pos>
+      <size>1 1</size>
+      <fontSize>0.040</fontSize>
+      <fontPath>./archivo/Cabin-Bold.ttf</fontPath>
+      <padding>0.1 0</padding>
+</text>
+<helpsystem name="help">
+      <textColor>ffffff</textColor>
+      <iconColor>ffffff</iconColor>
+    </helpsystem>
+</customView>
+<include tinyScreen="true">./gpicase.xml</include>
+<view name="system" ifHelpPrompts="false">
+<image name="BottomBar" extra="true">
+      <visible>false</visible>
+</image>
+<image name="BottomBar-shadow" extra="true">
+      <visible>false</visible>
+</image>
+<helpsystem name="help">
+<textColor>ffffff</textColor>
+<iconColor>ffffff</iconColor>
+<fontPath>./archivo/Cabin-Regular.ttf</fontPath>
+<fontSize>0.028</fontSize>
+<pos>0.05 0.96</pos>
+</helpsystem>
+</view>
+<view name="basic, detailed, grid" ifHelpPrompts="false">
+<image name="bottom" extra="true">
+      <visible>false</visible>
+</image>
+<image name="bottom-shadow" extra="true">
+      <pos>0 0.96</pos>
+</image>
+</view>
+<view name="detailed" ifHelpPrompts="false">
+<textlist name="gamelist">
+      <size>0.489 0.804</size>
+</textlist>
+<text name="md_description">
+      <size>0.467 0.21</size>
+</text>
+</view>
+<view name="grid" ifHelpPrompts="false">
+    <imagegrid name="gamegrid">
+      <pos>0.025 0.16</pos>
+      <size>0.950 0.84</size>
+</imagegrid>
+</view>
+</theme>

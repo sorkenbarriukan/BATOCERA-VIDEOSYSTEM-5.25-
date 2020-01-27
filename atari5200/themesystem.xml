@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+
+  <formatVersion>4</formatVersion>
+  
+  ----------------------system-----------------------------------------------------   
+<view name="system">
+<video name="backgroundvideo" extra="true">
+      <path>./ryu.mp4</path>                 
+     <pos>0.717625 0.7439635</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.215035 0.513045</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+		<showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+<video name="backgroundvideologo" extra="true">
+      <path>./source.mp4</path>                 
+       <pos>0.849945 0.4920035</pos>
+      <origin>0.5 0.5</origin>
+      <size>0.205875 0.098035</size>
+      <delay>0</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+	  <showSnapshotDelay>false</showSnapshotDelay>
+      <color>FFFFFF</color>
+      <zIndex>20</zIndex>      
+</video>
+</view>
+</theme>
